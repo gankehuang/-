@@ -2,7 +2,7 @@
 ### CSS
 > 使元素垂直居中的方法
 - 通过vertical-align:middle实现CSS垂直居中是最常使用的方法，但是有一点需要格外注意，vertical生效的前提是元素的display：inline-block。
-![Image text](http://jingyan.baidu.com/album/3a2f7c2e26041a26aed61150.html?picindex=2)
+![Image text](./img/1.png)
 
 ### ES6
 > 列举常用es6特性：
