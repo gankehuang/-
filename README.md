@@ -117,6 +117,8 @@
 - position:static：默认值
 - position: sticky 粘性定位   粘性定位，该定位基于用户滚动的位置。它的行为就像 position:relative; 而当页面滚动超出目标区域时，它的表现就像 position:fixed;，它会固定在目标位置。
 
+> postion的值以及其之间的区别
+- ![Image text](./img/8.png)
 
 
 
