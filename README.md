@@ -2,7 +2,99 @@
 ### CSS
 > 使元素垂直居中的方法
 - 通过vertical-align:middle实现CSS垂直居中是最常使用的方法，但是有一点需要格外注意，vertical生效的前提是元素的display：inline-block。
-![Image text](./img/1.png)
+- ![Image text](./img/1.png)
+- 通过display:flex实现CSS垂直居中的方法是给父元素display:flex;而子元素align-self:center;这个跟CSS水平居中的原理是一样的，只是在flex-direction上有所差别，一个是row(默认值)，另外一个是column。
+- ![Image text](./img/2.png)
+- 通过伪元素:before实现CSS垂直居中。具体方式是为父元素添加伪元素:before，使得子元素实现垂直居中。
+- ![Image text](./img/3.png)
+- 通过display:table-cell实现CSS垂直居中。给父元素display:table，子元素display：table-cell的方式实现CSS垂直居中。
+- ![Image text](./img/4.png)
+- 通过隐藏节点实现CSS垂直居中。创建一个隐藏节点#hide，使得隐藏节点的height值为剩余高度的一半即可。这种方法也适用于CSS水平居中，原理一样
+- ![Image text](./img/5.png)
+- 已知父元素高度通过transform实现CSS垂直居中。给子元素的position:relative，再通过translateY即可定位到垂直居中的位置
+- ![Image text](./img/6.png)
+- 未知父元素高度通过transform实现CSS垂直居中。先给父元素position:relative，再给子元素position:absolute，通过translateY即可定位到垂直居中的位置。
+- ![Image text](./img/7.png)
+
+> 元素水平垂直居中(已知宽高)
+- 设置父元素为相对定位，给子元素设置绝对定位，top: 0; right: 0; bottom: 0; left: 0; margin: auto;
+{% highlight html linenos %}
+<style>
+    #father {
+        width: 500px;
+        height: 300px;
+        background-color: skyblue;
+        position: relative;
+    }
+    #son {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+</style>
+ 
+<div id="father">
+    <div id="son">我是块级元素</div>
+</div>
+{% endhighlight %}
+- 设置父元素为相对定位，给子元素设置绝对定位，left: 50%; top: 50%; margin-left: --元素宽度的一半px; margin-top: --元素高度的一半px;
+{% highlight html linenos %}
+<style>
+    #father {
+        width: 500px;
+        height: 300px;
+        background-color: skyblue;
+        position: relative;
+}
+ 
+    #son {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -50px;
+        margin-top: -50px;
+}
+</style>
+ 
+<div id="father">
+    <div id="son">我是块级元素</div>
+</div>
+{% endhighlight %}
+> 元素水平垂直居中(未知宽高)
+- 设置父元素为相对定位，给子元素设置绝对定位，left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%);
+{% highlight html linenos %}
+<style>
+    #father {
+        width: 500px;
+        height: 300px;
+        background-color: skyblue;
+        position: relative;
+}
+ 
+    #son {
+        background-color: green;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+}
+</style>
+ 
+<div id="father">
+    <div id="son">我是块级元素</div>
+</div>
+{% endhighlight %}
+- 
+
 
 ### ES6
 > 列举常用es6特性：
