@@ -18,33 +18,33 @@
 
 > 元素水平垂直居中(已知宽高)
 - 设置父元素为相对定位，给子元素设置绝对定位，top: 0; right: 0; bottom: 0; left: 0; margin: auto;
-{% highlight html linenos %}
+(```)
     <style>
-    #father {
-        width: 500px;
-        height: 300px;
-        background-color: skyblue;
-        position: relative;
-    }
-    #son {
-        width: 100px;
-        height: 100px;
-        background-color: green;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-    }
+        #father {
+            width: 500px;
+            height: 300px;
+            background-color: skyblue;
+            position: relative;
+        }
+        #son {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
     </style>
  
     <div id="father">
         <div id="son">我是块级元素</div>
     </div>
-{% endhighlight %}
+(```)
 - 设置父元素为相对定位，给子元素设置绝对定位，left: 50%; top: 50%; margin-left: --元素宽度的一半px; margin-top: --元素高度的一半px;
-{% highlight html linenos %}
+(```)
 <style>
     #father {
         width: 500px;
@@ -68,10 +68,10 @@
 <div id="father">
     <div id="son">我是块级元素</div>
 </div>
-{% endhighlight %}
+(```)
 > 元素水平垂直居中(未知宽高)
 - 设置父元素为相对定位，给子元素设置绝对定位，left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%);
-{% highlight html linenos %}
+(```)
 <style>
     #father {
         width: 500px;
@@ -92,7 +92,7 @@
 <div id="father">
     <div id="son">我是块级元素</div>
 </div>
-{% endhighlight %}
+(```)
 - 
 
 
