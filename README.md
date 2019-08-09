@@ -19,7 +19,7 @@
 > 元素水平垂直居中(已知宽高)
 - 设置父元素为相对定位，给子元素设置绝对定位，top: 0; right: 0; bottom: 0; left: 0; margin: auto;
 {% highlight html linenos %}
-<style>
+    <style>
     #father {
         width: 500px;
         height: 300px;
@@ -37,11 +37,11 @@
         left: 0;
         margin: auto;
     }
-</style>
+    </style>
  
-<div id="father">
-    <div id="son">我是块级元素</div>
-</div>
+    <div id="father">
+        <div id="son">我是块级元素</div>
+    </div>
 {% endhighlight %}
 - 设置父元素为相对定位，给子元素设置绝对定位，left: 50%; top: 50%; margin-left: --元素宽度的一半px; margin-top: --元素高度的一半px;
 {% highlight html linenos %}
