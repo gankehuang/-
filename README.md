@@ -119,7 +119,9 @@
 
 > postion的值以及其之间的区别
 - ![Image text](./img/8.png)
-
+> 盒子模型的转换方法
+- IE盒子模型转换成W3C标准盒子模型：给文档头部加上 DOCTYPE 声明
+- W3C标准盒子模型转换成IE盒模型：添加使用css3中box-sizing属性，其值content-box规定的宽度高度行为，border-box通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。
 
 
 ### ES6
